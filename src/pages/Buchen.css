@@ -1,0 +1,163 @@
+.buchen {
+  flex: 1;
+  padding: 80px 48px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-header {
+  margin-bottom: 64px;
+}
+
+.page-tag {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.page-tag::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--red);
+}
+
+.page-header h1 {
+  font-size: clamp(40px, 5vw, 72px);
+  color: var(--white);
+}
+
+.buchen-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gray-light);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 14px 18px;
+  background: var(--gray);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-size: 15px;
+  color: var(--white);
+  outline: none;
+  transition: border-color 0.3s;
+  appearance: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--gray-light);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--red);
+}
+
+.form-group select option {
+  background: var(--gray);
+  color: var(--white);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  background: var(--red);
+  color: var(--white);
+  padding: 18px;
+  border: none;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.erfolg {
+  text-align: center;
+  padding: 120px 32px;
+}
+
+.erfolg-icon {
+  font-size: 64px;
+  margin-bottom: 32px;
+  display: block;
+}
+
+.erfolg h2 {
+  font-size: 40px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.erfolg p {
+  color: var(--gray-light);
+  font-size: 18px;
+  margin-bottom: 48px;
+}
+
+.erfolg button {
+  background: transparent;
+  color: var(--white);
+  padding: 14px 40px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: border-color 0.3s;
+}
+
+.erfolg button:hover {
+  border-color: var(--white);
+}
+
+@media (max-width: 600px) {
+  .buchen {
+    padding: 64px 24px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

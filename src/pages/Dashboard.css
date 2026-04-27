@@ -1,0 +1,196 @@
+.dashboard {
+  flex: 1;
+  padding: 80px 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-header {
+  margin-bottom: 64px;
+}
+
+.page-tag {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.page-tag::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--red);
+}
+
+.page-header h1 {
+  font-size: clamp(40px, 5vw, 72px);
+  color: var(--white);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+
+.stat-card {
+  background: var(--gray);
+  padding: 40px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 56px;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gray-light);
+}
+
+.termine-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.termin-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--black);
+  padding: 32px 40px;
+  border-left: 3px solid transparent;
+  transition: background 0.3s;
+}
+
+.termin-card:hover {
+  background: var(--gray);
+}
+
+.termin-card.neu {
+  border-left-color: var(--red);
+}
+
+.termin-card.bestätigt,
+.termin-card.bestatigt {
+  border-left-color: #10b981;
+}
+
+.termin-card.erledigt {
+  border-left-color: var(--gray-light);
+  opacity: 0.5;
+}
+
+.termin-info h3 {
+  font-size: 18px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.termin-info p {
+  color: var(--gray-light);
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.termin-aktionen {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.status-badge {
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.status-badge.neu {
+  background: rgba(192,57,43,0.15);
+  color: var(--red);
+}
+
+.status-badge.bestätigt,
+.status-badge.bestatigt {
+  background: rgba(16,185,129,0.15);
+  color: #10b981;
+}
+
+.status-badge.erledigt {
+  background: rgba(136,136,136,0.15);
+  color: var(--gray-light);
+}
+
+.termin-aktionen select {
+  padding: 8px 14px;
+  background: var(--gray-mid);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-size: 13px;
+  color: var(--white);
+    cursor: pointer;
+  outline: none;
+}.btn-loeschen {
+  background: transparent;
+  border: 1px solid rgba(192,57,43,0.3);
+  color: var(--red);
+  padding: 8px 14px;
+  border-radius: 2px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.btn-loeschen:hover { background: var(--red);
+  color: var(--white);
+  border-color: var(--red);
+}
+
+.leer {
+  text-align: center;
+  color: var(--gray-light);
+  padding: 80px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 64px 24px;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .termin-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px;
+  }
+  .termin-aktionen {
+    align-items: flex-start;
+    width: 100%;
+  }
+}
