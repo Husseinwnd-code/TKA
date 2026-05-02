@@ -5,11 +5,10 @@
 /* HERO */
 .hero {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  justify-content: space-between;
   padding: 80px 60px;
-  background: #f4f7f8;
+  gap: 40px;
 }
 
 .hero-content {
@@ -65,7 +64,6 @@
 }
 
 /* RIGHT LOGO */
-.hero-png,
 .hero-right {
   flex: 1;
   display: flex;
@@ -73,24 +71,21 @@
   align-items: center;
 }
 
-.hero-png img,
 .hero-right img {
+  max-width: 260px;
   width: 100%;
-  max-width: 320px;
   height: auto;
   object-fit: contain;
 }
 
-/* STATS - NO WHITE BOX */
+/* STATS */
 .stats-bar {
   max-width: 1100px;
   margin: 20px auto 60px;
   background: transparent;
-  border-radius: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   box-shadow: none;
-  overflow: visible;
 }
 
 .stat-item {
@@ -200,13 +195,11 @@
     padding: 60px 24px;
   }
 
-  .hero-png,
   .hero-right {
     width: 100%;
     justify-content: center;
   }
 
-  .hero-png img,
   .hero-right img {
     max-width: 220px;
   }
