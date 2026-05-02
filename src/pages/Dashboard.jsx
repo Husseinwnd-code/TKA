@@ -7,6 +7,12 @@ function Dashboard() {
   const [laden, setLaden] = useState(true)
 
   useEffect(() => {
+    if (localStorage.getItem('dashboard_auth') !== 'true') {
+      window.location.href = '/login'
+    }
+  }, [])
+
+  useEffect(() => {
     fetchTermine()
   }, [])
 

@@ -1,12 +1,32 @@
 import './Leistungen.css'
 
+import autohandelImg from '../assets/Autohandel.jpg'
+import werkstattImg from '../assets/Werkstatt.jpg'
+import diagnoseImg from '../assets/Diagnose.jpg'
+import aufbereitungImg from '../assets/Aufbereitung.jpg'
+
+
 const leistungen = [
-  { icon: '🔧', titel: 'Reparatur', beschreibung: 'Motor, Getriebe, Bremsen und alle mechanischen Teile' },
-  { icon: '🛠️', titel: 'Inspektion', beschreibung: 'Kompletter Check Ihres Fahrzeugs nach Herstellervorgaben' },
-  { icon: '🔋', titel: 'Batterie', beschreibung: 'Batterietest, Wechsel und Ladesystemprüfung' },
-  { icon: '🌡️', titel: 'Klimaanlage', beschreibung: 'Wartung, Befüllung und Dichtigkeitsprüfung' },
-  { icon: '🔍', titel: 'Diagnose', beschreibung: 'Fehlerdiagnose mit modernster Computertechnik' },
-  { icon: '🚗', titel: 'Reifenwechsel', beschreibung: 'Sommer- und Winterreifen, Auswuchten inklusive' },
+  {
+    img: autohandelImg,
+    titel: 'Autohandel',
+    beschreibung: 'Große Auswahl an geprüften Gebrauchtwagen zu fairen Preisen.'
+  },
+  {
+    img: werkstattImg,
+    titel: 'Werkstatt',
+    beschreibung: 'Professionelle Reparaturen und Wartungen für alle Fahrzeugtypen.'
+  },
+  {
+    img: diagnoseImg,
+    titel: 'Diagnose',
+    beschreibung: 'Moderne Diagnosegeräte für präzise Fehlerdiagnose.'
+  },
+  {
+    img: aufbereitungImg,
+    titel: 'Aufbereitung',
+    beschreibung: 'Fahrzeugaufbereitung für ein makelloses Ergebnis.'
+  },
 ]
 
 function Leistungen() {
@@ -20,9 +40,13 @@ function Leistungen() {
       <div className="leistungen-grid">
         {leistungen.map((item, index) => (
           <div className="leistung-card" key={index}>
-            <span className="leistung-icon">{item.icon}</span>
-            <h3>{item.titel}</h3>
-            <p>{item.beschreibung}</p>
+            <div className="leistung-img-wrapper">
+              <img src={item.img} alt={item.titel} className="leistung-img" />
+            </div>
+            <div className="leistung-body">
+              <h3>{item.titel}</h3>
+              <p>{item.beschreibung}</p>
+            </div>
           </div>
         ))}
       </div>

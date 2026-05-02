@@ -1,100 +1,86 @@
+/* PAGE */
 .leistungen {
-  flex: 1;
   padding: 80px 48px;
+  background: #f4f7f8;
 }
 
+/* HEADER */
 .page-header {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .page-tag {
   font-size: 12px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: var(--red);
+  color: #c0392b;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.page-tag::before {
-  content: '';
-  width: 32px;
-  height: 1px;
-  background: var(--red);
+  margin-bottom: 16px;
 }
 
 .page-header h1 {
-  font-size: clamp(40px, 5vw, 72px);
-  color: var(--white);
+  font-size: clamp(36px, 5vw, 60px);
+  color: #24313a;
 }
 
+/* GRID */
 .leistungen-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
+/* CARD */
 .leistung-card {
-  background: var(--black);
-  padding: 48px;
-  transition: background 0.3s;
-  position: relative;
+  background: white;
+  border-radius: 10px;
   overflow: hidden;
-}
-
-.leistung-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--red);
-  transition: width 0.4s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
 }
 
 .leistung-card:hover {
-  background: var(--gray);
+  transform: translateY(-5px);
 }
 
-.leistung-card:hover::after {
+/* IMAGE FIX (VERY IMPORTANT) */
+.leistung-img-wrapper {
   width: 100%;
+  height: 180px;
+  overflow: hidden;
 }
 
-.leistung-icon {
-  font-size: 36px;
-  margin-bottom: 24px;
+.leistung-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
-.leistung-card h3 {
-  font-size: 22px;
-  color: var(--white);
-  margin-bottom: 12px;
+/* TEXT */
+.leistung-body {
+  padding: 20px;
 }
 
-.leistung-card p {
-  color: var(--gray-light);
-  font-size: 15px;
-  line-height: 1.6;
+.leistung-body h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #24313a;
 }
 
-@media (max-width: 900px) {
-  .leistungen {
-    padding: 64px 24px;
-  }
-  .leistungen-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.leistung-body p {
+  font-size: 14px;
+  color: #6b7c85;
+  line-height: 1.5;
 }
 
-@media (max-width: 600px) {
+/* RESPONSIVE */
+@media (max-width: 768px) {
   .leistungen-grid {
     grid-template-columns: 1fr;
+  }
+
+  .leistungen {
+    padding: 60px 24px;
   }
 }

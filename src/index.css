@@ -7,31 +7,29 @@
 }
 
 :root {
-  --black: #0a0a0a;
-  --white: #f5f3ef;
+  --black: #f5f5f5;
+  --white: #1a1a1a;
   --red: #c0392b;
   --red-dark: #96281b;
-  --gray: #1a1a1a;
-  --gray-mid: #2d2d2d;
-  --gray-light: #888;
-  --border: rgba(255,255,255,0.08);
+  --gray: #e8e8e8;
+  --gray-mid: #d0d0d0;
+  --gray-light: #666;
+  --border: rgba(0,0,0,0.1);
   --font-display: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
 }
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--black);
-  color: var(--white);
+  background: #f5f5f5;
+  color: #1a1a1a;
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-
 #root {
   min-height: 100vh;
   display: flex;
