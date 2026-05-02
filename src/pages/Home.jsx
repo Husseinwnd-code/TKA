@@ -28,7 +28,7 @@ function Home() {
             <a href="/leistungen" className="btn-outline">Unsere Leistungen →</a>
           </div>
         </div>
-        <div className="hero-png">
+        <div className="hero-right">
   <img src={logoImg} alt="Logo" />
 </div>
 
