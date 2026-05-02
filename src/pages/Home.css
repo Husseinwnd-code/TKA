@@ -7,27 +7,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
   padding: 80px 60px;
   background: #f4f7f8;
 }
 
-/* LEFT TEXT */
 .hero-content {
   flex: 1;
   max-width: 550px;
-}
-
-/* RIGHT LOGO */
-.hero-right {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end; /* THIS moves it right */
-}
-
-.hero-right img {
-  max-width: 350px;
-  width: 100%;
-  height: auto;
 }
 
 .hero-content h1 {
@@ -77,49 +64,49 @@
   background: white;
 }
 
-/* LOGO RIGHT SIDE */
-.hero-png {
+/* RIGHT LOGO */
+.hero-png,
+.hero-right {
+  flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
-.hero-png img {
+.hero-png img,
+.hero-right img {
   width: 100%;
   max-width: 320px;
   height: auto;
+  object-fit: contain;
 }
 
-/* STATS */
+/* STATS - NO WHITE BOX */
 .stats-bar {
   max-width: 1100px;
-  margin: -40px auto 60px;
-  background: white;
-  border-radius: 10px;
+  margin: 20px auto 60px;
+  background: transparent;
+  border-radius: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  overflow: hidden;
+  box-shadow: none;
+  overflow: visible;
 }
 
 .stat-item {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 24px 20px;
-  border-right: 1px solid #eee;
-}
-
-.stat-item:last-child {
+  padding: 20px;
+  background: transparent;
   border-right: none;
 }
 
 .stat-item span {
   font-size: 26px;
-  background: #f3f6f8;
+  background: transparent;
   width: 46px;
   height: 46px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,13 +195,25 @@
 /* RESPONSIVE */
 @media (max-width: 1024px) {
   .hero {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 60px 24px;
+  }
+
+  .hero-png,
+  .hero-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-png img,
+  .hero-right img {
+    max-width: 220px;
   }
 
   .stats-bar {
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 24px 50px;
+    margin: 20px 24px 50px;
   }
 
   .home-leistungen {
