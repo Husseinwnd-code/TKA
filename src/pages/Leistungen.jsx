@@ -3,7 +3,7 @@ import './Leistungen.css'
 import autohandelImg from '../assets/Autohandel.jpg'
 import werkstattImg from '../assets/Werkstatt.jpg'
 import diagnoseImg from '../assets/Diagnose.jpg'
-import aufbereitungImg from '../assets/Aufbereitung.jpg'
+import aufbereitungImg from '../assets/aufbereitung.jpg'
 
 
 const leistungen = [
